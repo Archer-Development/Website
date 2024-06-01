@@ -2,7 +2,7 @@
 
 <img src="public/Logo.svg" alt="Archer Logo" width="100"/>
 
-Archer Security is a discord bot designed for moderation and security.
+Archer Security is a Discord bot designed for moderation and security, equipped with full moderation, ticket, and utility features.
 
 ## Table of Contents
 
