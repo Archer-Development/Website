@@ -1,6 +1,6 @@
 # Archer Website
 
-<img src="public/logo.svg" alt="Archer Logo" width="100"/>
+<img src="public/Logo.svg" alt="Archer Logo" width="100"/>
 
 Archer Security is a discord bot designed for moderation and security.
 
