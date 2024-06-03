@@ -18,7 +18,13 @@ const Footer = () => {
             security, equipped with full moderation, ticket, and utility
             features.
           </p>
-          <a href={"https://melonslab.com"} style={{ textDecoration: 'none', color: 'inherit' }}>
+          <a
+            href="https://melonslab.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Melonslab website"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
             <div className="flex items-center bg-custom-tertiary text-white text-xs font-montserrat px-3 py-2 rounded-full">
               Proudly hosted on
               <Image
