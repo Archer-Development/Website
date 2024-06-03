@@ -33,32 +33,32 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/Archer-Development/Website
-    cd Website
-    ```
+   ```bash
+   git clone https://github.com/Archer-Development/Website
+   cd Website
+   ```
 
 2. **Install dependencies:**
 
-    ```bash
-    yarn install
-    ```
+   ```bash
+   yarn install
+   ```
 
 ## Running the Project
 
 1. **Start the development server:**
 
-    ```bash
-    yarn dev
-    ```
+   ```bash
+   yarn dev
+   ```
 
-    The application will be available at `http://localhost:3000`.
+   The application will be available at `http://localhost:3000`.
 
 2. **Build for production:**
 
-    ```bash
-    yarn build
-    yarn start
-    ```
+   ```bash
+   yarn build
+   yarn start
+   ```
 
-    The production build will be optimized and ready for deployment.
+   The production build will be optimized and ready for deployment.

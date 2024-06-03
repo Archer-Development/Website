@@ -50,8 +50,8 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         <meta property="og:url" content="https://www.archer.is/" />
         <meta property="og:site_name" content="Archer Security" />
         <meta property="og:image" content="https://www.archer.is/Banner.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="1360" />
+        <meta property="og:image:height" content="480" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link rel="icon" href="/favicon/favicon.ico" />
