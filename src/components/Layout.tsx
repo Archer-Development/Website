@@ -25,7 +25,6 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <div className={`${museoModerno.variable} ${montserrat.variable}`}>
       <Head>
-        <html lang="en" />
         <meta name="msapplication-TileColor" content="#F7768D" />
         <meta name="theme-color" content="#F7768D" />
         <meta name="title" content="Archer Security" />

@@ -16,7 +16,7 @@ const HomePage = () => {
             Add To Discord
           </button>
           <button
-            className="text-custom-accent font-montserrat py-2 px-6 rounded-full hover:bg-custom-accent hover:text-white transition duration-300"
+            className=" text-custom-accent font-montserrat py-2 px-6 rounded-full hover:bg-custom-accent hover:text-white transition duration-300"
             aria-label="Support"
           >
             Support
