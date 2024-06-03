@@ -31,45 +31,69 @@ const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-16 text-custom-quaternary font-montserrat">
           <div>
-            <h4 className="text-custom-accent text-lg mb-4">Site</h4>
+            <h2 className="text-custom-accent text-lg mb-4">Site</h2>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="hover:text-custom-accent text-white">
+                <Link
+                  href="/"
+                  className="hover:text-custom-accent text-white"
+                  aria-label="Home"
+                >
                   Home
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="text-custom-accent text-lg mb-4">Social</h4>
+            <h2 className="text-custom-accent text-lg mb-4">Social</h2>
             <ul className="space-y-2">
               <li>
-                <Link href="/facebook" className="text-white">
+                <Link
+                  href="/facebook"
+                  className="text-white"
+                  aria-label="Discord"
+                >
                   Discord
                 </Link>
               </li>
               <li>
-                <Link href="/twitter" className="text-white">
+                <Link
+                  href="/twitter"
+                  className="text-white"
+                  aria-label="Twitter"
+                >
                   Twitter
                 </Link>
               </li>
               <li>
-                <Link href="/instagram" className="text-white">
+                <Link
+                  href="/instagram"
+                  className="text-white"
+                  aria-label="Instagram"
+                >
                   Instagram
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="text-custom-accent text-lg mb-4">Legal</h4>
+            <h2 className="text-custom-accent text-lg mb-4">Legal</h2>
             <ul className="space-y-2">
               <li>
-                <Link href="/privacy" className="text-white">
+                <Link
+                  href="/privacy"
+                  className="text-white"
+                  aria-label="Privacy Policy"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-white">
+                <Link
+                  href="/terms"
+                  className="text-white"
+                  aria-label="Terms of Service"
+                >
                   Terms of Service
                 </Link>
               </li>

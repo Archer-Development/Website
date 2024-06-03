@@ -70,6 +70,7 @@ const Navbar = () => {
               <button
                 onClick={toggleMobileMenu}
                 className="text-custom-accent hover:text-white font-montserrat"
+                aria-label="Open mobile menu"
               >
                 <svg
                   className="w-6 h-6"
@@ -91,11 +92,15 @@ const Navbar = () => {
               <Link
                 href="/contact"
                 className="text-custom-accent hover:text-white font-montserrat"
+                aria-label="Support"
               >
                 Support
               </Link>
               <Link href="/signup">
-                <button className="bg-custom-accent text-custom-primary font-montserrat py-2 px-4 rounded-full hover:bg-white hover:text-custom-accent transition duration-300">
+                <button
+                  className="bg-custom-accent text-custom-primary font-montserrat py-2 px-4 rounded-full hover:bg-white hover:text-custom-accent transition duration-300"
+                  aria-label="Add to Discord"
+                >
                   Add To Discord
                 </button>
               </Link>
@@ -128,6 +133,7 @@ const Navbar = () => {
               <button
                 onClick={toggleMobileMenu}
                 className="text-custom-accent hover:text-white font-montserrat"
+                aria-label="Open mobile menu"
               >
                 <svg
                   className="w-6 h-6"
@@ -149,11 +155,15 @@ const Navbar = () => {
               <Link
                 href="/contact"
                 className="text-custom-accent hover:text-white font-montserrat"
+                aria-label="Support"
               >
                 Support
               </Link>
               <Link href="/signup">
-                <button className="bg-custom-accent text-custom-primary font-montserrat py-2 px-4 rounded-full hover:bg-white hover:text-custom-accent transition duration-300">
+                <button
+                  className="bg-custom-accent text-custom-primary font-montserrat py-2 px-4 rounded-full hover:bg-white hover:text-custom-accent transition duration-300"
+                  aria-label="Add to Discord"
+                >
                   Add To Discord
                 </button>
               </Link>
@@ -171,6 +181,7 @@ const Navbar = () => {
             <button
               onClick={closeMobileMenu}
               className="absolute top-2 right-2 text-custom-accent hover:text-white"
+              aria-label="Close mobile menu"
             >
               <svg
                 className="w-6 h-6"
@@ -192,6 +203,7 @@ const Navbar = () => {
                 href="/contact"
                 className="block text-custom-accent hover:text-white font-montserrat"
                 onClick={closeMobileMenu}
+                aria-label="Support"
               >
                 Support
               </Link>
@@ -199,6 +211,7 @@ const Navbar = () => {
                 <button
                   className="w-full bg-custom-accent text-custom-primary font-montserrat py-2 rounded-full hover:bg-white hover:text-custom-accent transition duration-300"
                   onClick={closeMobileMenu}
+                  aria-label="Add to Discord"
                 >
                   Add To Discord
                 </button>

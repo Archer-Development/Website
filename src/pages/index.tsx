@@ -9,10 +9,16 @@ const HomePage = () => {
           Protect your server and your users for free with our security bot.
         </p>
         <div className="flex space-x-4">
-          <button className="bg-custom-accent text-custom-primary font-montserrat py-2 px-4 rounded-full hover:bg-white hover:text-custom-accent transition duration-300">
+          <button
+            className="bg-custom-accent text-custom-primary font-montserrat py-2 px-4 rounded-full hover:bg-white hover:text-custom-accent transition duration-300"
+            aria-label="Add to Discord"
+          >
             Add To Discord
           </button>
-          <button className=" text-custom-accent font-montserrat py-2 px-6 rounded-full hover:bg-custom-accent hover:text-white transition duration-300">
+          <button
+            className="text-custom-accent font-montserrat py-2 px-6 rounded-full hover:bg-custom-accent hover:text-white transition duration-300"
+            aria-label="Support"
+          >
             Support
           </button>
         </div>
