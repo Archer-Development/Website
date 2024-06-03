@@ -18,16 +18,18 @@ const Footer = () => {
             security, equipped with full moderation, ticket, and utility
             features.
           </p>
-          <div className="flex items-center bg-custom-tertiary text-white text-xs font-montserrat px-3 py-2 rounded-full">
-            Proudly hosted on
-            <Image
-              src="/Melonslab.svg"
-              alt="Melonslab"
-              width={80}
-              height={24}
-              className="ml-2"
-            />
-          </div>
+          <a href={"https://melonslab.com"} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="flex items-center bg-custom-tertiary text-white text-xs font-montserrat px-3 py-2 rounded-full">
+              Proudly hosted on
+              <Image
+                src="/Melonslab.svg"
+                alt="Melonslab"
+                width={80}
+                height={24}
+                className="ml-2"
+              />
+            </div>
+          </a>
         </div>
         <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-16 text-custom-quaternary font-montserrat">
           <div>
