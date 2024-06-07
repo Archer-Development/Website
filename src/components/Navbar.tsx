@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 const Navbar = () => {
   const [showStickyNavbar, setShowStickyNavbar] = useState(false);
@@ -72,37 +73,16 @@ const Navbar = () => {
                 className="text-custom-accent hover:text-white font-montserrat"
                 aria-label="Open mobile menu"
               >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
+                <FiMenu className="w-6 h-6" />
               </button>
             </div>
             <div className="hidden lg:flex space-x-4 items-center">
               <Link
-                href="/contact"
+                href="/"
                 className="text-custom-accent hover:text-white font-montserrat"
-                aria-label="Support"
+                aria-label="Home Link"
               >
-                Support
-              </Link>
-              <Link href="/signup">
-                <button
-                  className="bg-custom-accent text-custom-primary font-montserrat py-2 px-4 rounded-full hover:bg-white hover:text-custom-accent transition duration-300"
-                  aria-label="Add to Discord"
-                >
-                  Add To Discord
-                </button>
+                Home
               </Link>
             </div>
           </div>
@@ -135,37 +115,16 @@ const Navbar = () => {
                 className="text-custom-accent hover:text-white font-montserrat"
                 aria-label="Open mobile menu"
               >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
+                <FiMenu className="w-6 h-6" />
               </button>
             </div>
             <div className="hidden lg:flex space-x-4 items-center">
               <Link
-                href="/contact"
+                href="/"
                 className="text-custom-accent hover:text-white font-montserrat"
-                aria-label="Support"
+                aria-label="Home Link"
               >
-                Support
-              </Link>
-              <Link href="/signup">
-                <button
-                  className="bg-custom-accent text-custom-primary font-montserrat py-2 px-4 rounded-full hover:bg-white hover:text-custom-accent transition duration-300"
-                  aria-label="Add to Discord"
-                >
-                  Add To Discord
-                </button>
+                Home
               </Link>
             </div>
           </div>
@@ -176,6 +135,9 @@ const Navbar = () => {
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-85"
           onClick={handleBackdropClick}
+          aria-label="Mobile menu backdrop"
+          role="button"
+          tabIndex={0}
         >
           <div className="bg-custom-secondary p-6 rounded-lg relative w-3/4 max-w-md mx-auto">
             <button
@@ -183,38 +145,16 @@ const Navbar = () => {
               className="absolute top-2 right-2 text-custom-accent hover:text-white"
               aria-label="Close mobile menu"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <FiX className="w-6 h-6" />
             </button>
             <div className="space-y-3 text-center">
               <Link
-                href="/contact"
+                href="/"
                 className="block text-custom-accent hover:text-white font-montserrat"
                 onClick={closeMobileMenu}
-                aria-label="Support"
+                aria-label="Home Link"
               >
-                Support
-              </Link>
-              <Link href="/signup" className="block">
-                <button
-                  className="w-full bg-custom-accent text-custom-primary font-montserrat py-2 rounded-full hover:bg-white hover:text-custom-accent transition duration-300"
-                  onClick={closeMobileMenu}
-                  aria-label="Add to Discord"
-                >
-                  Add To Discord
-                </button>
+                Home
               </Link>
             </div>
           </div>
