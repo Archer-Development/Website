@@ -29,7 +29,7 @@ const HomePage = () => {
             Add To Discord
           </Link>
           <Link
-            href="https://discord.com/invite/8YX966BGSc"
+            href="https://discord.com/invite/mYzTeDSr7z"
             target="_blank"
             rel="noopener noreferrer"
             className="text-custom-accent font-montserrat py-2 px-6 rounded-full hover:bg-custom-accent hover:text-white transition duration-300 flex items-center"

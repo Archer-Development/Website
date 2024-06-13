@@ -23,7 +23,7 @@ const footerCategories: FooterCategory[] = [
     items: [
       {
         label: 'Support',
-        href: 'https://discord.com/invite/8YX966BGSc',
+        href: 'https://discord.com/invite/mYzTeDSr7z',
         external: true,
       },
       {
