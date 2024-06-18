@@ -84,6 +84,13 @@ const Navbar = () => {
               >
                 Home
               </Link>
+              <Link
+                href="https://roadmap.archer.is/"
+                className="text-custom-accent hover:text-white font-montserrat"
+                aria-label="Roadmap Link"
+              >
+                Roadmap
+              </Link>
             </div>
           </div>
         </div>
@@ -126,6 +133,13 @@ const Navbar = () => {
               >
                 Home
               </Link>
+              <Link
+                href="https://roadmap.archer.is/"
+                className="text-custom-accent hover:text-white font-montserrat"
+                aria-label="Roadmap Link"
+              >
+                Roadmap
+              </Link>
             </div>
           </div>
         </div>
@@ -155,6 +169,14 @@ const Navbar = () => {
                 aria-label="Home Link"
               >
                 Home
+              </Link>
+              <Link
+                href="https://roadmap.archer.is/"
+                className="block text-custom-accent hover:text-white font-montserrat"
+                onClick={closeMobileMenu}
+                aria-label="Roadmap Link"
+              >
+                Roadmap
               </Link>
             </div>
           </div>
