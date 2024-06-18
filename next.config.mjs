@@ -9,7 +9,7 @@ const nextConfig = {
       "object-src 'none'",
       "img-src 'self' data:",
       "font-src 'self'",
-      "connect-src 'self'"
+      "connect-src 'self'",
     ];
 
     if (isDev) {
@@ -42,7 +42,8 @@ const nextConfig = {
           },
           {
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+            value:
+              'camera=(), microphone=(), geolocation=(), interest-cohort=()',
           },
           {
             key: 'X-DNS-Prefetch-Control',
