@@ -1,20 +1,27 @@
-name: Format
+name: Format and Lint
 
 on:
   push:
     branches:
+      - development
       - main
   pull_request:
     branches:
+      - development
       - main
 
 jobs:
-  format:
+  format_and_lint:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -29,3 +36,9 @@ jobs:
 
       - name: Run Prettier
         run: yarn run format
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Apply formatting changes
+          branch: ${{ github.head_ref }}
