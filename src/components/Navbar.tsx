@@ -4,29 +4,7 @@ import Image from 'next/image';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 const Navbar = () => {
-  const [showStickyNavbar, setShowStickyNavbar] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > 100 && currentScrollY > lastScrollY) {
-        setShowStickyNavbar(true);
-      } else if (currentScrollY < lastScrollY && currentScrollY <= 100) {
-        setShowStickyNavbar(false);
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [lastScrollY]);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -52,25 +30,32 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-custom-secondary p-4" id="original-navbar">
-        <div className="container mx-auto flex justify-between items-center max-w-screen-lg">
-          <div className="flex items-center">
-            <Image
-              src="/Logo.svg"
-              alt="Logo"
-              width={40}
-              height={40}
-              className="mr-3"
-            />
+      <nav className="bg-[rgba(45,48,77,0.7)] p-4 fixed top-4 left-1/2 transform -translate-x-1/2 z-50 rounded-xl shadow-lg backdrop-blur-md w-[calc(100%-40px)] max-w-screen-lg">
+        <div className="flex items-center justify-between">
+          {/* Left side: Text and version */}
+          <div className="flex items-center space-x-4">
+            <span className="text-[rgb(10,154,191)] text-xl font-bold">
+              Archer Security
+            </span>
             <span className="bg-custom-tertiary text-white text-xs font-semibold px-2 py-1 rounded-full">
               v0.1.0
             </span>
           </div>
-          <div className="space-x-4 flex items-center">
+          {/* Center: Logo */}
+          <div className="flex flex-grow justify-center">
+            <Image
+              src="/Logo.ico"
+              alt="Logo"
+              width={40}
+              height={40}
+            />
+          </div>
+          {/* Right side: Navigation links */}
+          <div className="flex items-center space-x-4">
             <div className="lg:hidden">
               <button
                 onClick={toggleMobileMenu}
-                className="text-custom-accent hover:text-white font-montserrat"
+                className="text-[rgb(10,154,191)] hover:text-white font-montserrat"
                 aria-label="Open mobile menu"
               >
                 <FiMenu className="w-6 h-6" />
@@ -79,63 +64,14 @@ const Navbar = () => {
             <div className="hidden lg:flex space-x-4 items-center">
               <Link
                 href="/"
-                className="text-custom-accent hover:text-white font-montserrat"
+                className="text-[rgb(10,154,191)] hover:text-white font-montserrat"
                 aria-label="Home Link"
               >
                 Home
               </Link>
               <Link
                 href="https://roadmap.archer.is/"
-                className="text-custom-accent hover:text-white font-montserrat"
-                aria-label="Roadmap Link"
-              >
-                Roadmap
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <nav
-        className={`bg-custom-secondary p-4 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
-          showStickyNavbar ? 'translate-y-0' : '-translate-y-full'
-        }`}
-        id="sticky-navbar"
-      >
-        <div className="container mx-auto flex justify-between items-center max-w-screen-lg">
-          <div className="flex items-center">
-            <Image
-              src="/Logo.svg"
-              alt="Logo"
-              width={40}
-              height={40}
-              className="mr-3"
-            />
-            <span className="bg-custom-tertiary text-white text-xs font-semibold px-2 py-1 rounded-full">
-              v0.1.0
-            </span>
-          </div>
-          <div className="space-x-4 flex items-center">
-            <div className="lg:hidden">
-              <button
-                onClick={toggleMobileMenu}
-                className="text-custom-accent hover:text-white font-montserrat"
-                aria-label="Open mobile menu"
-              >
-                <FiMenu className="w-6 h-6" />
-              </button>
-            </div>
-            <div className="hidden lg:flex space-x-4 items-center">
-              <Link
-                href="/"
-                className="text-custom-accent hover:text-white font-montserrat"
-                aria-label="Home Link"
-              >
-                Home
-              </Link>
-              <Link
-                href="https://roadmap.archer.is/"
-                className="text-custom-accent hover:text-white font-montserrat"
+                className="text-[rgb(10,154,191)] hover:text-white font-montserrat"
                 aria-label="Roadmap Link"
               >
                 Roadmap
@@ -156,7 +92,7 @@ const Navbar = () => {
           <div className="bg-custom-secondary p-6 rounded-lg relative w-3/4 max-w-md mx-auto">
             <button
               onClick={closeMobileMenu}
-              className="absolute top-2 right-2 text-custom-accent hover:text-white"
+              className="absolute top-2 right-2 text-[rgb(10,154,191)] hover:text-white"
               aria-label="Close mobile menu"
             >
               <FiX className="w-6 h-6" />
@@ -164,7 +100,7 @@ const Navbar = () => {
             <div className="space-y-3 text-center">
               <Link
                 href="/"
-                className="block text-custom-accent hover:text-white font-montserrat"
+                className="block text-[rgb(10,154,191)] hover:text-white font-montserrat"
                 onClick={closeMobileMenu}
                 aria-label="Home Link"
               >
@@ -172,7 +108,7 @@ const Navbar = () => {
               </Link>
               <Link
                 href="https://roadmap.archer.is/"
-                className="block text-custom-accent hover:text-white font-montserrat"
+                className="block text-[rgb(10,154,191)] hover:text-white font-montserrat"
                 onClick={closeMobileMenu}
                 aria-label="Roadmap Link"
               >
