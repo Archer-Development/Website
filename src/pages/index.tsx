@@ -1,9 +1,10 @@
+import React from 'react';
 import Link from 'next/link';
 import { FiExternalLink } from 'react-icons/fi';
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-custom-primary">
+    <div className="flex flex-col min-h-screen bg-custom-primary relative">
       <main
         className="flex-grow flex flex-col items-center text-center px-4"
         style={{
