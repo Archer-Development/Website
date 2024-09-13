@@ -48,7 +48,7 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center max-w-screen-lg">
         <div className="flex flex-col items-start mb-8 md:mb-0">
           <Image
-            src="/Logo.svg"
+            src="/Logo.ico"
             alt="Logo"
             width={50}
             height={50}
