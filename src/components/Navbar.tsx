@@ -7,11 +7,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : 'auto';
   }, [isMobileMenuOpen]);
 
   const toggleMobileMenu = () => {
@@ -32,25 +28,25 @@ const Navbar = () => {
     <>
       <nav className="bg-[rgba(45,48,77,0.7)] p-4 fixed top-4 left-1/2 transform -translate-x-1/2 z-50 rounded-xl shadow-lg backdrop-blur-md w-[calc(100%-40px)] max-w-screen-lg">
         <div className="flex items-center justify-between">
-          {/* Left side: Text and version */}
-          <div className="flex items-center space-x-4">
-            <span className="text-white text-xl font-bold">
-              ArcherSecurity
-            </span>
-            <span className="bg-custom-tertiary text-white text-xs font-semibold px-2 py-1 rounded-full">
-              v0.1.0
-            </span>
-          </div>
-          {/* Center: Logo */}
-          <div className="flex flex-grow justify-center">
+          {/* Left side: Logo */}
+          <div className="flex items-center space-x-4 flex-grow-0">
             <Image
               src="/Logo.ico"
               alt="Logo"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
             />
+            {/* Left side: Text and version */}
+            <div className="flex items-center space-x-4">
+              <span className="text-white text-xl font-bold">
+                Archer
+              </span>
+              <span className="bg-custom-tertiary text-white text-xs font-semibold px-2 py-1 rounded-full">
+                v0.1.0
+              </span>
+            </div>
           </div>
-          {/* Right side: Navigation links */}
+          {/* Right side: Navigation links / Hamburger menu */}
           <div className="flex items-center space-x-4">
             <div className="lg:hidden">
               <button
