@@ -37,7 +37,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           content="Discord Bot, Archer Security, Archer Bot, Security Bot, Archer, Discord Security Bot"
         />
         <meta name="robots" content="index, follow" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta property="og:locale" content="en_US" />
@@ -53,6 +53,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         <meta property="og:image:width" content="1360" />
         <meta property="og:image:height" content="480" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link rel="icon" href="/favicon/favicon.ico" />
         <link
