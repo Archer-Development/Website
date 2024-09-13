@@ -34,8 +34,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Left side: Text and version */}
           <div className="flex items-center space-x-4">
-            <span className="text-[rgb(10,154,191)] text-xl font-bold">
-              Archer Security
+            <span className="text-white text-xl font-bold">
+              ArcherSecurity
             </span>
             <span className="bg-custom-tertiary text-white text-xs font-semibold px-2 py-1 rounded-full">
               v0.1.0
