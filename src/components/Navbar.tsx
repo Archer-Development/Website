@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-[rgba(45,48,77,0.7)] p-4 fixed top-4 left-1/2 transform -translate-x-1/2 z-50 rounded-xl shadow-lg backdrop-blur-md w-[calc(100%-40px)] max-w-screen-lg">
+      <nav className="bg-[rgba(45,48,77,0.7)] p-4 fixed top-4 left-1/2 transform -translate-x-1/2 z-50 rounded-xl shadow-lg backdrop-blur-md w-[calc(100%)] max-w-screen-xl">
         <div className="flex items-center justify-between">
           {/* Left side: Logo */}
           <div className="flex items-center space-x-4 flex-grow-0">
