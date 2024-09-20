@@ -5,7 +5,6 @@ import Image, { StaticImageData } from 'next/image';
 import logo from "../../public/Logo.ico"; 
 import avatar from "../../public/pfp.ico";
 
-// Define the message interface
 interface Message {
   user: string;
   userImg: StaticImageData;
@@ -13,40 +12,51 @@ interface Message {
   timestamp: string;
   isBot?: boolean;
   botLogo?: StaticImageData;
+  embed?: {
+    title: string;
+    icon: string;
+    userName: string;
+    userId: string;
+    description: string;
+    color?: string; 
+  };
 }
 
-// Message Component
-const DiscordMessage: React.FC<Message> = ({ user, userImg, content, timestamp, isBot, botLogo }) => {
+const DiscordMessage: React.FC<Message> = ({ user, userImg, content, timestamp, isBot, botLogo, embed }) => {
   return (
-    <div className={`flex items-start mb-4 ${isBot ? 'bg-gray-700' : 'bg-gray-800'} rounded-md p-2`}>
-      {/* User or Bot Avatar */}
-      <Image
-        src={isBot ? (botLogo || avatar) : userImg} // Fallback to avatar if botLogo is undefined
-        alt={`${user} avatar`}
-        width={40}
-        height={40}
-        className="w-10 h-10 rounded-full mr-3"
-      />
-
-      <div className="flex flex-col">
-        {/* User or Bot Name and Timestamp */}
-        <div className="flex items-center mb-1">
-          <span className={`font-bold ${isBot ? 'text-blue-400' : 'text-white'}`}>
-            {user}
-          </span>
-          <span className="ml-2 text-xs text-gray-500">{timestamp}</span>
+    <div className="mb-4">
+      {/* User Info and Avatar */}
+      <div className="flex items-start mb-1">
+        <Image
+          src={isBot ? (botLogo || avatar) : userImg}
+          alt={`${user} avatar`}
+          width={40}
+          height={40}
+          className="rounded-full mr-2"
+        />
+        <div className="flex flex-col">
+          <div className="flex items-center">
+            <span className={`font-bold ${isBot ? 'text-blue-400' : 'text-white'}`}>{user}</span>
+            <span className="ml-2 text-xs text-gray-500">{timestamp}</span>
+          </div>
+          <p className="text-white whitespace-pre-line mt-1">{content}</p>
         </div>
-
-        {/* Message Content */}
-        <p className="text-white whitespace-pre-line">{content}</p>
       </div>
+      {isBot && embed && (
+        <div className={`bg-gray-800 rounded-md p-3 border-l-4 ${embed.color ? `border-${embed.color}` : 'border-blue-400'} ml-10 mt-1`}>
+          <div className="font-bold text-white">{embed.title}</div>
+          <div className="text-gray-300">
+            {embed.icon} @ {embed.userName} | ({embed.userId})
+          </div>
+          <div className="font-bold text-gray-300 mt-1">Reason:</div>
+          <p className="text-gray-300">{embed.description}</p>
+        </div>
+      )}
     </div>
   );
 };
 
-// Main Component to simulate bot showcase
 const DiscordBotShowcase: React.FC = () => {
-  // Rendered messages
   const messages: Message[] = [
     {
       user: 'Hr1s7ov',
@@ -58,23 +68,17 @@ const DiscordBotShowcase: React.FC = () => {
       user: 'Archer',
       botLogo: logo,
       userImg: avatar,
-      content: 'Hr1s7ov has been silenced for 30m!\nREASON: Similar Message Spam',
       timestamp: 'Today at 4:45 PM',
       isBot: true,
-    },
-    {
-      user: 'Hr1s7ov',
-      userImg: avatar,
-      content: 'I didn’t do anything!',
-      timestamp: 'Today at 5:10 PM',
-    },
-    {
-      user: 'Archer',
-      botLogo: logo,
-      userImg: avatar,
-      content: 'Hr1s7ov has been kicked from the server!',
-      timestamp: 'Today at 5:11 PM',
-      isBot: true,
+      content: '', 
+      embed: {
+        title: 'Warned Member',
+        icon: '✅', // Example icon
+        userName: 'Hr1s7ov',
+        userId: '808608962151972864',
+        description: 'Spamming.',
+        color: 'green-500',
+      },
     },
   ];
 
@@ -92,13 +96,13 @@ const DiscordBotShowcase: React.FC = () => {
             timestamp={msg.timestamp}
             isBot={msg.isBot}
             botLogo={msg.botLogo}
+            embed={msg.embed}
           />
         ))}
       </div>
     </div>
   );
 };
-
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
