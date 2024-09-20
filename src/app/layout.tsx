@@ -51,9 +51,12 @@ export default function RootLayout({
       </Head>
 
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="bg-hero-pattern no-repeat bg-cover bg-center bg-custom-primary text-white">
+          <Navbar />
+          {children}
+          <Footer />
+
+        </div>
       </body>
     </html >
   );

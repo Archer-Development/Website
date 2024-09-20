@@ -44,7 +44,7 @@ const footerCategories: FooterCategory[] = [
 
 const Footer = () => {
     return (
-        <footer className="bg-custom-secondary p-8">
+        <footer className="bg-[rgba(45,48,77,0.60)] p-8">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center max-w-screen-lg">
                 <div className="flex flex-col items-start mb-8 md:mb-0">
                     <Image
@@ -80,7 +80,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-16 text-custom-quaternary font-montserrat">
                     {footerCategories.map((category) => (
                         <div key={category.title}>
-                            <h2 className="text-custom-accent text-lg mb-4">
+                            <h2 className="text-accent text-lg mb-4">
                                 {category.title}
                             </h2>
                             <ul className="space-y-2">

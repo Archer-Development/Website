@@ -74,7 +74,7 @@ const Navbar = () => {
                         <div className="lg:hidden">
                             <button
                                 onClick={toggleMobileMenu}
-                                className="text-[rgb(10,154,191)] hover:text-white font-montserrat"
+                                className="text-primary hover:text-white font-montserrat"
                                 aria-label="Open mobile menu"
                             >
                                 <Menu className="w-6 h-6" />
@@ -83,14 +83,14 @@ const Navbar = () => {
                         <div className="hidden lg:flex space-x-4 items-center">
                             <Link
                                 href="/"
-                                className="text-[rgb(10,154,191)] hover:text-white font-montserrat"
+                                className="text-primary hover:text-white font-montserrat"
                                 aria-label="Home Link"
                             >
                                 Home
                             </Link>
                             <Link
                                 href="https://roadmap.archer.is/"
-                                className="text-[rgb(10,154,191)] hover:text-white font-montserrat"
+                                className="text-primary hover:text-white font-montserrat"
                                 aria-label="Roadmap Link"
                             >
                                 Roadmap
@@ -111,7 +111,7 @@ const Navbar = () => {
                     <div className="bg-custom-secondary p-6 rounded-lg relative w-3/4 max-w-md mx-auto">
                         <button
                             onClick={closeMobileMenu}
-                            className="absolute top-2 right-2 text-[rgb(10,154,191)] hover:text-white"
+                            className="absolute top-2 right-2 text-primary hover:text-white"
                             aria-label="Close mobile menu"
                         >
                             <X className="w-6 h-6" />
@@ -119,7 +119,7 @@ const Navbar = () => {
                         <div className="space-y-3 text-center">
                             <Link
                                 href="/"
-                                className="block text-[rgb(10,154,191)] hover:text-white font-montserrat"
+                                className="block text-primary hover:text-white font-montserrat"
                                 onClick={closeMobileMenu}
                                 aria-label="Home Link"
                             >
@@ -127,7 +127,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 href="https://roadmap.archer.is/"
-                                className="block text-[rgb(10,154,191)] hover:text-white font-montserrat"
+                                className="block text-primary hover:text-white font-montserrat"
                                 onClick={closeMobileMenu}
                                 aria-label="Roadmap Link"
                             >

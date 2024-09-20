@@ -12,13 +12,19 @@ const config: Config = {
         museoModerno: ['var(--font-museoModerno)'],
         montserrat: ['var(--font-montserrat)'],
       },
+      textColor: {
+        primary: '#ffffff',
+        accent: '#06b6d4',
+      },
+      backgroundImage: {
+        'hero-pattern': "url('/background.png')",
+      },
       colors: {
         custom: {
           primary: '#202237',
           secondary: '#1C1E30',
           tertiary: '#2A2C3D',
           quaternary: '#212337',
-          accent: '#0A9ABF',
         },
       },
     },
