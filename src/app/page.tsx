@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import React from 'react';
-import DiscordBotShowcase from '../components/DiscordBotShowcase';
+import ShowcaseLayout from "../components/ShowcaseLayout";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
         style={{
           justifyContent: 'center',
           paddingBottom: '70px',
-          paddingTop: '170px', // Add enough top padding to avoid overlap
+          paddingTop: '170px',
         }}
       >
         <h1 className="text-5xl md:text-7xl font-bold mb-4 font-museoModerno text-accent">
@@ -45,7 +45,7 @@ export default function Home() {
       </main>
 
       {/* Bot Showcase Component */}
-      <DiscordBotShowcase />
+      <ShowcaseLayout />
     </div>
   );
 }
