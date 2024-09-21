@@ -11,6 +11,7 @@ export default function Home() {
         style={{
           justifyContent: 'center',
           paddingBottom: '70px',
+          paddingTop: '170px', // Add enough top padding to avoid overlap
         }}
       >
         <h1 className="text-5xl md:text-7xl font-bold mb-4 font-museoModerno text-accent">
