@@ -68,12 +68,13 @@ const ShowcaseLayout: React.FC = () => {
       <h1 className="text-4xl font-bold text-center text-white py-8">Some of Our Features</h1>
 
       {showcases.map((item, index) => (
-        <div key={index} className="flex flex-col md:flex-row items-center justify-center md:space-x-8">
+        <div key={index} className="flex flex-col md:flex-row items-start justify-center md:space-x-8">
           {/* Title and Description */}
-          <div className="w-full md:w-1/4 p-4 text-white">
+          <div className="w-full md:w-1/4 p-4 text-white self-start">
             <div className="text-2xl font-bold text-center md:text-left">{item.title}</div>
             <div className="text-lg text-center md:text-left">{item.description}</div>
           </div>
+
 
           {/* Showcase */}
           <div className="w-full md:w-1/2 p-4 mx-auto">

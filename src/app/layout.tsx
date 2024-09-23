@@ -49,7 +49,7 @@ export default function RootLayout({
       </Head>
 
       <body>
-        <div className="bg-hero-pattern no-repeat bg-cover bg-center bg-custom-primary text-white">
+        <div className="bg-hero-pattern bg-no-repeat bg-cover bg bg-custom-primary text-white">
           <Navbar />
           {children}
           <Footer />

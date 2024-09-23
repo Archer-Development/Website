@@ -54,7 +54,7 @@ const DiscordBotShowcase: React.FC<ShowcaseProps> = ({ commandUsed, botData, emb
   });
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className=" flex items-center justify-center">
       <div className="bg-gray-800 rounded-lg p-4 w-full max-w-2xl shadow-lg">
         <div className="text-sm text-gray-500 mb-2"># general</div>
 
