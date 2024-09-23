@@ -2,12 +2,13 @@ import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import React from 'react';
 import ShowcaseLayout from "../components/ShowcaseLayout";
+import Stats from "@/components/stats";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <main
-        className="flex-grow flex flex-col items-center text-center px-4"
+        className="flex-grow flex flex-col items-center text-center px-4 h-screen"
         style={{
           justifyContent: 'center',
           paddingBottom: '70px',
@@ -43,6 +44,8 @@ export default function Home() {
           </Link>
         </div>
       </main>
+
+      <Stats />
 
       {/* Bot Showcase Component */}
       <ShowcaseLayout />
