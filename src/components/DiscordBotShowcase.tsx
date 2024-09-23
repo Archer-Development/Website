@@ -14,13 +14,13 @@ interface BotData {
 interface ShowcaseProps {
   commandUsed: string;
   botData: BotData;
-  embedColor?: string; // Change from string to hex color usage
+  embedColor?: string;
 }
 
 const DiscordBotShowcase: React.FC<ShowcaseProps> = ({ commandUsed, botData, embedColor }) => {
   const messages = [];
 
-  // User message for /warn command
+
   if (commandUsed === "/warn") {
     messages.push({
       user: "Hr1s7ov",
@@ -31,7 +31,6 @@ const DiscordBotShowcase: React.FC<ShowcaseProps> = ({ commandUsed, botData, emb
     });
   }
 
-  // Bot response
   messages.push({
     user: botData.user,
     userImg: logo,
@@ -45,12 +44,12 @@ const DiscordBotShowcase: React.FC<ShowcaseProps> = ({ commandUsed, botData, emb
           ? 'Mod Logs'
           : commandUsed === "/automod"
             ? 'Automatic Moderation'
-            : 'Command Log', // Fallback title
+            : 'Command Log',
       icon: '🛠️',
       userName: botData.user,
       userId: '808608962151972864',
       details: botData.details || [],
-      color: embedColor || '#1DA1F2', // Use hex color here
+      color: embedColor || '#1DA1F2',
     },
   });
 

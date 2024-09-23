@@ -9,7 +9,7 @@ interface Embed {
   userId: string;
   details: string[];
   description?: string;
-  color?: string; // This will hold the hex color
+  color?: string;
 }
 
 interface Message {

@@ -18,7 +18,7 @@ const ShowcaseLayout: React.FC = () => {
               "Time: Today at 4:45 PM"
             ]
           }}
-          embedColor="#28a745" // Use hex color
+          embedColor="#28a745"
         />
       ),
     },
@@ -37,7 +37,7 @@ const ShowcaseLayout: React.FC = () => {
               "Time: Today at 4:46 PM"
             ]
           }}
-          embedColor="#ffffff" // Use hex color
+          embedColor="#ffffff"
         />
       ),
     },
@@ -56,7 +56,7 @@ const ShowcaseLayout: React.FC = () => {
               "Time: Today at 4:47 PM"
             ]
           }}
-          embedColor="#ffc107" // Use hex color
+          embedColor="#ffc107"
         />
       ),
     },
