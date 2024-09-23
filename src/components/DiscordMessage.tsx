@@ -1,6 +1,6 @@
 import React from 'react';
-import Image, { StaticImageData } from 'next/image'; 
-import avatar from "../../public/pfp.ico"; 
+import Image, { StaticImageData } from 'next/image';
+import avatar from "../../public/pfp.ico";
 
 interface Embed {
   title: string;
@@ -8,8 +8,8 @@ interface Embed {
   userName: string;
   userId: string;
   details: string[];
-  description?: string; 
-  color?: string;
+  description?: string;
+  color?: string; // This will hold the hex color
 }
 
 interface Message {
@@ -20,7 +20,6 @@ interface Message {
   isBot?: boolean;
   botLogo?: StaticImageData;
   embed?: Embed;
-  color?: string;
   commandUsed?: string;
 }
 
@@ -29,7 +28,7 @@ const DiscordMessage: React.FC<Message> = ({ user, userImg, content, timestamp, 
     <div className="mb-4">
       {isBot && commandUsed && (
         <div className="text-sm text-gray-500 mb-1 ml-4">
-            <span>╭——</span>
+          <span>╭——</span>
           <Image
             src={userImg}
             alt={`${user} avatar`}
@@ -40,7 +39,7 @@ const DiscordMessage: React.FC<Message> = ({ user, userImg, content, timestamp, 
           <span className="font-bold text-white">Moderator</span> used <span className="font-bold text-blue-400">{commandUsed}</span>
         </div>
       )}
-  
+
       <div className="flex items-start mb-1">
         <Image
           src={isBot ? (botLogo || avatar) : userImg}
@@ -57,9 +56,9 @@ const DiscordMessage: React.FC<Message> = ({ user, userImg, content, timestamp, 
           <p className="text-white whitespace-pre-line mt-1">{content}</p>
         </div>
       </div>
-  
+
       {isBot && embed && (
-        <div className={`bg-gray-900 rounded-md p-3 border-l-4 ${embed.color ? `border-${embed.color}` : 'border-blue-400'} ml-10 mt-1`}>
+        <div className={`bg-gray-900 rounded-md p-3 border-l-4`} style={{ borderColor: embed.color || '#1DA1F2', marginLeft: '2.5rem', marginTop: '0.25rem' }}>
           <div className="font-bold text-white">{embed.title}</div>
           <div className="text-gray-300">
             {embed.icon} @ {embed.userName} | ({embed.userId})

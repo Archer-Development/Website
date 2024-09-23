@@ -14,7 +14,7 @@ interface BotData {
 interface ShowcaseProps {
   commandUsed: string;
   botData: BotData;
-  embedColor?: string; 
+  embedColor?: string; // Change from string to hex color usage
 }
 
 const DiscordBotShowcase: React.FC<ShowcaseProps> = ({ commandUsed, botData, embedColor }) => {
@@ -34,24 +34,24 @@ const DiscordBotShowcase: React.FC<ShowcaseProps> = ({ commandUsed, botData, emb
   // Bot response
   messages.push({
     user: botData.user,
-    userImg: logo, 
+    userImg: logo,
     timestamp: 'Today at 4:46 PM',
     isBot: true,
-    content: '', 
+    content: '',
     embed: {
-        title: commandUsed === "/warn" 
-          ? 'Warned Member' 
-          : commandUsed === "/modlogs" 
-            ? 'Mod Logs' 
-            : commandUsed === "/automod" 
-              ? 'Automatic Moderation' 
-              : 'Command Log', // Fallback title
-        icon: '🛠️',
-        userName: botData.user,
-        userId: '808608962151972864',
-        details: botData.details || [],
-        color: 'blue-500',
-      },
+      title: commandUsed === "/warn"
+        ? 'Warned Member'
+        : commandUsed === "/modlogs"
+          ? 'Mod Logs'
+          : commandUsed === "/automod"
+            ? 'Automatic Moderation'
+            : 'Command Log', // Fallback title
+      icon: '🛠️',
+      userName: botData.user,
+      userId: '808608962151972864',
+      details: botData.details || [],
+      color: embedColor || '#1DA1F2', // Use hex color here
+    },
   });
 
   return (
@@ -68,7 +68,7 @@ const DiscordBotShowcase: React.FC<ShowcaseProps> = ({ commandUsed, botData, emb
             timestamp={msg.timestamp}
             isBot={msg.isBot}
             botLogo={msg.isBot ? logo : undefined}
-            embed={msg.isBot ? msg.embed : undefined} 
+            embed={msg.isBot ? msg.embed : undefined}
             commandUsed={msg.isBot ? commandUsed : undefined}
           />
         ))}
