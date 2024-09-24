@@ -86,7 +86,7 @@ const Navbar = () => {
                                 Home
                             </Link>
                             <Link
-                                href="https://roadmap.archer.is/"
+                                href="/Roadmap"
                                 className="text-primary hover:text-white font-montserrat"
                                 aria-label="Roadmap Link"
                             >
@@ -122,7 +122,7 @@ const Navbar = () => {
                         Home
                     </Link>
                     <Link
-                        href="https://roadmap.archer.is/"
+                        href="/Roadmap"
                         className="block text-primary hover:text-white font-montserrat"
                         onClick={closeMobileMenu}
                         aria-label="Roadmap Link"
