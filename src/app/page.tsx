@@ -45,7 +45,9 @@ export default function Home() {
         </div>
       </main>
 
-      <Stats />
+      <div className="flex justify-center items-center min-h-screen">
+            <Stats />
+        </div>
 
       {/* Bot Showcase Component */}
       <ShowcaseLayout />

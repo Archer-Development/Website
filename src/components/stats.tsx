@@ -3,6 +3,8 @@
 import { Activity, Server, User } from "lucide-react";
 import { useState, useEffect } from "react";
 import { NumericFormat } from 'react-number-format';
+import Image from 'next/image';
+import banner from '../../public/Banner.png';
 
 export default function Stats() {
     const [stats, setStats] = useState({
@@ -45,11 +47,26 @@ export default function Stats() {
     };
 
     return (
-        <div className="bg-[rgba(45,48,77,0.60)] p-8 flex flex-col md:flex-row justify-between items-center w-full px-40">
-            <div className="flex flex-col items-center text-white text-xl mb-4 md:mb-0">
-                <p className="text-left w-full">Servers</p>
-                <div className="flex items-center">
-                    <Server className="mr-2" />
+        <div className="bg-gray-800 w-full max-w-2xl shadow-lg rounded-lg overflow-hidden">
+            {/* Banner */}
+            <Image
+                src={banner}
+                alt="Discord banner"
+                width={500}
+                height={200}
+                className="w-full object-cover"
+            />
+
+            {/* Bot Info Section */}
+            <div className="p-6 bg-gray-900">
+                <h1 className="text-white text-3xl font-bold text-center">Archer</h1>
+                <p className="text-gray-400 text-center text-lg mt-2">Archer Security is a discord bot designed for moderation and security.</p>
+            </div>
+
+            {/* Stats Section */}
+            <div className="grid grid-cols-3 gap-6 p-6 bg-gray-900 text-white text-center">
+                <div className="flex flex-col items-center">
+                    <Server className="text-2xl mb-2" />
                     <NumericFormat
                         value={stats.servers}
                         displayType={'text'}
@@ -57,12 +74,10 @@ export default function Stats() {
                         decimalScale={0}
                         customInput={CustomNumberFormat}
                     />
+                    <p className="text-sm mt-1">Servers</p>
                 </div>
-            </div>
-            <div className="flex flex-col items-center text-white text-xl mb-4 md:mb-0">
-                <p className="text-left w-full">Users</p>
-                <div className="flex items-center">
-                    <User className="mr-2" />
+                <div className="flex flex-col items-center">
+                    <User className="text-2xl mb-2" />
                     <NumericFormat
                         value={stats.users}
                         displayType={'text'}
@@ -70,13 +85,12 @@ export default function Stats() {
                         decimalScale={0}
                         customInput={CustomNumberFormat}
                     />
+                    <p className="text-sm mt-1">Members</p>
                 </div>
-            </div>
-            <div className="flex flex-col items-center text-white text-xl">
-                <p className="text-left w-full">Uptime</p>
-                <div className="flex items-center">
-                    <Activity className="mr-2" />
+                <div className="flex flex-col items-center">
+                    <Activity className="text-2xl mb-2" />
                     <span>{formatPercentage(stats.uptime)} Uptime</span>
+                    <p className="text-sm mt-1">Uptime</p>
                 </div>
             </div>
         </div>
