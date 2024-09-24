@@ -1,0 +1,42 @@
+{
+    "roadmap": [
+        {
+            "title": "ALPHA 1.7",
+            "date": "JULY",
+            "features": [
+                { "feature": "/server-info", "completed": false },
+                { "feature": "/report bug", "completed": false },
+                { "feature": "/report url", "completed": false },
+                { "feature": "/report bot-abuse", "completed": false },
+                { "feature": "/blacklist user (DEV COMMAND)", "completed": false },
+                { "feature": "/blacklist server (DEV COMMAND)", "completed": false },
+                { "feature": "/help", "completed": false },
+                { "feature": "/helpline", "completed": false },
+                { "feature": "/setup emergency-role", "completed": false },
+                { "feature": "/emergency", "completed": false }
+            ]
+        },
+        {
+            "title": "ALPHA 1.8",
+            "date": "AUGUST",
+            "features": [
+                { "feature": "⚠️ Backend/Database Rewrite ⚠️", "completed": false },
+                { "feature": "Timeout Logging", "completed": false },
+                { "feature": "Mute & Deafen Logging", "completed": false },
+                { "feature": "Member Event Logging", "completed": false },
+                { "feature": "Voice Event Logging", "completed": false },
+                { "feature": "Bulk Delete Logging", "completed": false },
+                { "feature": "Message Edit Logging", "completed": false },
+                { "feature": "Forceban", "completed": false },
+                { "feature": "Clear Warnings", "completed": false }
+            ]
+        },
+        {
+            "title": "ALPHA 1.9",
+            "date": "SEPTEMBER",
+            "features": [
+                { "feature": "❗Coming Soon❗", "completed": false }
+            ]
+        }
+    ]
+}
