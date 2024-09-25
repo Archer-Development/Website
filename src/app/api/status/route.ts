@@ -1,10 +1,42 @@
-import { NextResponse } from 'next/server';
+// check if the archer is online or offline by checking the last updated time of the database
+// 5 minutes is the threshold for the bot to be considered offline
+
+import { PrismaClient } from '@prisma/client';
 
 export async function GET() {
-  return NextResponse.json({
-    status: 'online',
-    uptime: 0.999,
-    servers: 1490,
-    users: 1500000,
-  });
+  const prisma = new PrismaClient();
+  const response = await prisma.archerInformation.findFirst();
+
+  if (!response) {
+    return new Response(JSON.stringify({ status: 'offline' }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
+  if (response.UpdatedAt.getTime() < Date.now() - 300000) {
+    return new Response(
+      JSON.stringify({
+        status: 'offline',
+        servers: response.TotalServerCount,
+        users: response.TotalUserCount,
+      }),
+      {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      },
+    );
+  } else {
+    return new Response(
+      JSON.stringify({
+        status: 'online',
+        servers: response.TotalServerCount,
+        users: response.TotalUserCount,
+      }),
+      {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      },
+    );
+  }
 }

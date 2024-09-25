@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ArcherInformation {
+  id               Int      @id @default(autoincrement())
+  TotalServerCount String
+  TotalUserCount   String
+  ClientId         String   @unique
+  UpdatedAt        DateTime
+}
